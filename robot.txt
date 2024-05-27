@@ -1,0 +1,8 @@
+User-agent: Yandex
+Host: k-amelia.ru
+Sitemap: https://k-amelia.ru/sitemap.xml
+Allow: https://k-amelia.ru/index.html
+Allow: https://k-amelia.ru/index-uslugi.html
+Allow: https://k-amelia.ru/index-drivters.html
+Allow: https://k-amelia.ru/index-cars.html
+Allow: https://k-amelia.ru/index-contacts.html

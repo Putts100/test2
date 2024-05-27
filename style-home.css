@@ -1,0 +1,828 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7vw;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 11.1vw;
+  margin-left: 2.5vw;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 0.7vw;
+  display: inline-block;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.19vw; /* Увеличиваем размер шрифта */
+  padding: 0.7vw;
+  padding-right: 1vw; 
+  position: relative; /* добавлено */
+  transition: transform 0.3s ease; 
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.14vw; /* добавлено */
+  left: 0;
+  width: 100%;
+  height: 0.14vh;
+  background-color: transparent; /* добавлено */
+  transition: background-color 0.3s ease-in-out; /* добавлено */
+}
+
+nav ul li a:hover::after,
+nav ul li a:active::after { /* добавлено */
+  background-color: white; /* добавлено */
+}
+
+nav ul li a:hover {
+  transform: scale(1.2); /* Увеличиваем размер пункта при наведении */
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social-link {
+  display: inline-block;
+  margin-right: 0.7vw;
+}
+
+.social-link img {
+  width: 2vw;
+  transition: transform 0.3s ease; /* Добавляем плавный переход */
+}
+
+.social-link:hover img {
+  transform: scale(1.2); /* Увеличиваем размер картинки при наведении */
+}
+
+
+.social .phone {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.19vw; /* Увеличиваем размер шрифта */
+  margin-right: 9.9vw; 
+}
+
+.curvy-background {
+  background-image:linear-gradient(90deg, rgba(194,13,25,1) 0%, rgba(19,0,0,1) 100%);
+  height: 35.9vw;
+  width: 200%; 
+  border-radius: 0 0 50% 50%;
+  margin-left: -50%; 
+  margin-right: -50%; 
+}
+
+
+.company-heading {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  color: white;
+  font-size: 3.64vw;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+}
+
+
+.company-subheading {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: white;
+  font-size: 3.64vw;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  margin-top: 0.7vw; /* Добавляем отступ сверху */
+}
+
+
+.company-description {
+  position: absolute;
+  top: 40%; /* Перемещаем текст ниже */
+  left: 10%;
+  color: white;
+  font-size: 1.32vw;
+  font-family: Helvetica, sans-serif;
+}
+
+
+.truck-image {
+  position: absolute;
+  top: 54%;
+  right: -45.5vw; /* Начальное положение за пределами страницы */
+  transform: translateY(-50%);
+  width: 42vw; 
+  animation: slideIn 2s forwards; /* Настройка анимации на 2 секунды */
+}
+
+@keyframes slideIn {
+  from {
+      right: -45.5vw; /* Начальное положение за пределами страницы */
+  }
+  to {
+      right: 3%; /* Конечное положение на странице */
+  }
+}
+
+.contact-button {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  background-color: white;
+  color: rgb(194, 13, 25);
+  padding: 0.7vw 14vw;
+  border-radius: 1.4vw;
+  font-size: 1.19vw;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.contact-button:hover {
+  transform: scale(1.1);
+}
+
+.overlay {
+  display: none;
+  background-color: #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  font-family: Helvetica, sans-serif;
+  width: 800px;
+  height: 450px;
+}
+
+.overlay h2{
+font-size: 25px;
+text-align: center;
+}
+
+.rounded-inp {
+  width: 100%;
+  margin: 5px 0;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.rounded-text {
+  width: 100%;
+  height: 30%;
+  margin: 5px 0;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.download-button {
+  background-color: rgba(194,13,25,1);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 200px; /* Измените ширину по вашему усмотрению */
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.download-button:hover {
+  transform: scale(1.1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+.additional-text {
+  float: left;
+  width: 45%; /* Ширина блока с текстом */
+  padding: 90px;
+  font-size: 25px;
+  font-family: Helvetica, sans-serif;
+  margin-top: 150px;
+}
+
+.additional-text p {
+  margin-bottom: 25px;
+}
+
+.map-container {
+  position: relative;
+}
+
+.map-image {
+  float: right; /* Позволяет картинке быть выровненной справа */
+  margin-left: 20px; /* Добавляет небольшой отступ слева от текста */
+  margin-right: 100px;
+  width: 500px; 
+  height: auto; 
+  margin-top: 80px;
+}
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+.location-marker {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(34, 0, 255);
+  border-radius: 50%;
+  border: 2px solid white;
+  animation: pulse 2s infinite;
+  cursor: pointer;
+}
+
+.location-marker::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 5px;
+  top: -30px; /* Позиционирование надписи относительно маркера */
+  left: 0;
+  display: none;
+}
+
+.location-marker:hover .tooltip {
+  display: block;
+}
+
+.centered-text {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 700px;
+
+}
+
+.additional-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  text-align: left;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 40px;
+  margin-left: 250px;
+  border-bottom: 4px solid rgb(194, 13, 25);
+}
+
+.center {
+  text-align: center;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 40px;
+  padding-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid rgb(194, 13, 25);
+}
+
+.right {
+  text-align: right;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 40px;
+  margin-right: 250px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid rgb(194, 13, 25);
+}
+
+.additional-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.additional-info p {
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.additional-info p:nth-child(1) {
+  text-align: left; /* Для первой надписи */
+  margin-left: 200px;
+}
+
+.additional-info p:nth-child(2) {
+  text-align: center; /* Для второй надписи */
+}
+
+.additional-info p:nth-child(3) {
+  text-align: right; /* Для третьей надписи */
+  margin-right: 210px;
+}
+
+.uslugi-heading {
+  text-align: left; /* Центрируем текст */
+}
+
+.uslugi-heading h2 {
+  font-weight: bold; /* Делаем текст жирным */
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 150px;
+  margin-left: 30px;
+}
+
+.bullet-list {
+  list-style: none;
+}
+
+.bullet-list p {
+  margin-bottom: 10px;
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+.bullet-list img {
+  margin-left: 30px;
+}
+
+.bullet-list p img {
+  width: 20px; /* Размер красной галочки */
+  margin-right: 20px; /* Отступ между галочкой и текстом */
+}
+
+.images-right {
+  float: right;
+  margin-left: 20px; /* Расстояние между текстом и картинками */
+  margin-top: 150px;
+  margin-right: 150px;
+}
+
+.right-container {
+  margin-bottom: 10px; /* Расстояние между двумя картинками */
+}
+
+.right-container img {
+  display: block;
+}
+
+.right-container p {
+  text-align: center; /* Центрирование текста под картинкой */
+  font-family: Helvetica, sans-serif;
+}
+
+.gabarits {
+  text-align: left; /* Центрируем текст */
+}
+
+.gabarits h2 {
+  font-weight: bold; /* Делаем текст жирным */
+  font-family: Helvetica, sans-serif;
+  color: #626262;
+  font-size: 25px;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.podrobnee-button {
+  display: inline-block;
+  text-decoration: none;
+  top: 60%;
+  left: 10%;
+  background-color: rgb(194, 13, 25);
+  color: rgb(255, 255, 255);
+  padding: 10px 200px;
+  border-radius: 20px;
+  font-size: 18px;
+  width: 400px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 45px;
+  text-align: center;
+  margin-left: 40px;
+  transition: transform 0.3s;
+}
+
+.podrobnee-button:hover {
+  transform: scale(1.1);
+}
+
+.about {
+  text-align: center; /* Центрируем текст */
+}
+
+.about h2 {
+  font-weight: bold; /* Делаем текст жирным */
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 130px;
+  margin-left: 30px;
+}
+
+.three {
+  float: left;
+}
+
+.three h2 {
+  font-weight: bold; /* Делаем текст жирным */
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgb(194, 13, 25);
+  font-size: 45px;
+  margin-top: 70px;
+  margin-left: 100px;
+}
+
+.adout-us {
+  float: right;
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+.image-container {
+  text-align: center; /* Центрируем текст под изображением */
+}
+
+.advantages-images img {
+width: 20%;
+}
+
+.image-caption {
+  margin-top: 50px; /* Устанавливаем отступ между изображением и надписью */
+  font-family: "Helvetica", sans-serif;
+}
+
+.work-heading {
+  text-align: center; /* Центрируем текст */
+}
+
+.work-heading h2 {
+  font-weight: bold; /* Делаем текст жирным */
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 420px;
+}
+
+.image-with-text {
+  display: flex;
+  flex-direction: column; /* Изменяем направление на вертикальное */
+}
+
+.image-cont {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.image-cont img {
+  max-width: 100px;
+  height: auto;
+  margin-right: 90px;
+  margin-left: 200px;
+}
+
+.text-cont {
+  flex-grow: 1; /* Занимает оставшееся пространство в контейнере */
+}
+
+.text-cont p {
+  font-size: 20px;
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+}
+
+.vopros-heading {
+  text-align: center; /* Центрируем текст */
+}
+
+.vopros-heading h2 {
+  font-weight: bold; /* Делаем текст жирным */
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 90px;
+}
+
+.gray-boxes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.gray-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  width: 700px;
+  height: 70px;
+  background-color: #ccc;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 30px; /* Отступ между прямоугольниками */
+  margin-left: 400px;
+  padding: 0 10px;
+}
+
+.details-box {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  background-color: #9c9b9b;
+  border-radius: 10px;
+  padding: 10px;
+  top: 0;
+  margin-left: 750px;
+  width: 350px;
+  height: 70px;
+}
+
+
+.gray-box.show-details .details-box {
+  display: block;
+}
+
+.show-details .details-box {
+  display: block;
+}
+
+.close-btn {
+  transition: transform 0.3s;
+}
+
+.rotated {
+  transform: rotate(90deg);
+}
+
+.centered {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 100px;
+
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-slider {
+  overflow: hidden;
+  width: 700px;
+  height: 200px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.review-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.review-slide.active {
+  opacity: 1;
+}
+
+
+.review-box {
+  background-color: #ccc;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 600px;
+  height: 150px;
+  text-align: left; 
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.review-box strong {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+
+.review-form {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 10px;
+  width: 700px;
+  margin-top: 20px;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-input {
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 650px;
+}
+
+.rounded-input, .rounded-textarea {
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.sub-button {
+  background-color: rgba(194, 13, 25, 1);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  font-size: 18px;
+  width: 700px;
+  height: 40px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 45px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.sub-button:hover {
+  transform: scale(1.1);
+}
+
+.curvy {
+  background-image: linear-gradient(90deg, rgba(194, 13, 25, 1) 0%, rgba(19, 0, 0, 1) 100%);
+  height: 35.9vw;
+  width: 200%;
+  border-radius: 50% 50% 0 0; /* Зеркальное отражение закругленных углов */
+  margin-left: -50%;
+  margin-right: -50%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column; /* Размещаем элементы в колонку */
+  align-items: center; /* Выравниваем элементы по центру */
+  justify-content: flex-start;
+}
+
+.question {
+  color: white;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: 40px;
+}
+
+.data {
+  color: white;
+  flex-direction: column;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.input-field {
+  width: 600px;
+  height: 40px;
+  border-radius: 10px;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  padding-left: 40px;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.submit-button {
+  display: inline-block;
+  top: 60%;
+  left: 10%;
+  background-color: rgb(54, 37, 37);
+  color: rgb(255, 255, 255);
+  padding: 10px 200px;
+  border-radius: 20px;
+  font-size: 18px;
+  width: 400px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 45px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.submit-button:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #000000; /* черный цвет */
+  color: #ffffff; /* белый цвет текста для контраста */
+  padding: 20px; /* добавим отступы для лучшего визуального эффекта */
+  display: flex;
+  justify-content: space-between; /* Распределение контента по краям */
+  align-items: center; /* Выравнивание по центру по вертикали */
+}
+
+.left-content{
+  float: left;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+
+}
+.right-content {
+  float: right;
+  font-family: Helvetica, sans-serif;
+  margin-left: 700px;
+  font-size: 20px;
+
+}
+
+.center-content {
+    display: flex;
+    justify-content: center; /* Выравнивание по центру по горизонтали */
+}
+
+.center-content iframe {
+    width: 300px; /* Установите желаемую ширину карты */
+    height: 200px; /* Установите желаемую высоту карты */
+    margin-left: 100px;
+}
+
+
+

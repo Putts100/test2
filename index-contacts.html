@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камелия</title>
+    <link rel="stylesheet" href="style-contacts.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.png" alt="Логотип компании"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index-uslugi.html">Услуги</a></li>
+                <li><a href="index-drivers.html">Водителям</a></li>
+                <li><a href="index-cars.html">Наш автопарк</a></li>
+                <li><a href="index-contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+          <a href="#https://web.telegram.org/a/" class="social-link"><img src="img/telegram.png" alt="Telegram"></a>
+          <a href="#https://www.whatsapp.com/" class="social-link"><img src="img/whatsapp.png" alt="Whatsapp"></a>
+          <a href="#https://account.mail.ru/login?page=https%3A%2F%2Fe.mail.ru%2Fmessages%2Finbox&allow_external=1" class="social-link"><img src="img/mail.png" alt="Mail"></a>
+            <span class="phone">8 (800) 2222-702</span>
+        </div>
+    </header>
+
+    <div class="curvy-background">
+        <h1 class="company-heading">Контакты</h1>
+    </div>
+
+    <div class="content">
+        <div class="text">
+            <h2>8 (800) 2222-702</h2>
+            <p>606440, Нижегородская обл. г.Бор, <br>пер.Полевой 12</p>
+            <div class="button" onclick="toggleOverlay()">Реквизиты ООО "Камелия"</div>
+            <div class="overlay" id="overlay">
+                <span class="close-btn" onclick="toggleOverlay()">&times;</span>
+                <h1>Реквизиты</h1>
+                <h2>ООО "Камелия"</h2>
+                <p>Юр. адрес — 606448, г.Бор, 2 микрорайон, д.6, кв.35
+                    <br>Фак. адрес — 606440, г. Бор, пер.Полевой 12
+                    <br>ИНН — 524606438004
+                    <br>ОГРНИП — 304524628700068
+                    <br>Расчетный счет — 40802810142110000632
+                    <br>Банк — ПАО Волго-вятский банк Сбербанк России г.Бор
+                    <br>БИК — 042202603
+                    <br>Корр.счет — 30101810900000000603</p>
+                    <a id="downloadLink" download="requisites.txt"><div class="download-button">Скачать реквизиты</div></a>
+            </div>
+        </div>
+
+        <div class="map" id="map">
+            <iframe src="https://yandex.ru/map-widget/v1/-/CCUcKQZ~" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <div class="curvy">
+        <h1 class="question">Остались вопросы?</h1>
+        <p class="data">Внесите свои контактные данные и мы свяжемся с вами.</p>
+        <input type="text" class="input-field" placeholder="Имя">
+        <input type="tel" class="input-field" placeholder="+7 (999) 999-99-99 ">
+        <input type="text" class="input-field" placeholder="E-mail">
+        <a href="" class="submit-button">Отправить</a>
+    
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="left-content">
+                <p>606440,<br> Нижегородская обл.<br>г. Бор, пер. Полевой 12</p>
+            </div>
+            <div class="right-content">
+                <p>Телефон<br> 8 (800) 2222-702<br><br>Аренда спецтехники<br> 8 (920) 019-40-25</p>
+            </div>
+            <div class="center-content">
+                <iframe src="https://yandex.ru/maps/20037/bor/house/polevoy_pereulok_12/YE0Ydg5hSEcHQFtsfX91eX9nZg==/?ll=44.091120%2C56.348343&z=16"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-contacts.js"></script>
+    <script src="map.js"></script>
+
+</body>
+</html>

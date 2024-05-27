@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камелия</title>
+    <link rel="stylesheet" href="style-uslygi.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.png" alt="Логотип компании"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index-uslugi.html">Услуги</a></li>
+                <li><a href="index-drivers.html">Водителям</a></li>
+                <li><a href="index-cars.html">Наш автопарк</a></li>
+                <li><a href="index-contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+          <a href="#https://web.telegram.org/a/" class="social-link"><img src="img/telegram.png" alt="Telegram"></a>
+          <a href="#https://www.whatsapp.com/" class="social-link"><img src="img/whatsapp.png" alt="Whatsapp"></a>
+          <a href="#https://account.mail.ru/login?page=https%3A%2F%2Fe.mail.ru%2Fmessages%2Finbox&allow_external=1" class="social-link"><img src="img/mail.png" alt="Mail"></a>
+            <span class="phone">8 (800) 2222-702</span>
+        </div>
+    </header>
+
+    <div class="curvy-background">
+        <h1 class="company-heading">Услуги</h1>
+    </div>
+
+    <div class="content-wrapper">
+        <img src="img/gps.png" alt="Изображение" class="content-image">
+        <img src="img/locator.png" alt="Анимированная картинка" class="moving-image">
+        <p class="content-text">Мы используем телеметрические датчики контроля GPS/
+            <br>ГЛОНАСС, Wialon, Мовизор, Адвантум и мобильные 
+            <br>приложения на собственном и привлеченном транспорте чтобы:
+            <br><br>
+            Контролировать прибытия на погрузку и выгрузку
+            <br><br>
+            Контролировать движение и остановки
+            <br><br>
+            Контролировать температуру груза и т.д.</p>
+    </div>
+
+    <div class="calculator-wrapper">
+        <div class="calculator-box">
+            <h2>Калькулятор стоимости грузоперевозки</h2>
+            <input type="text" placeholder="Откуда" class="rounded-input">
+            <input type="text" placeholder="Куда" class="rounded-input">
+            <input type="text" placeholder="Размер груза" class="rounded-input">
+            <button class="calculate-button rounded-button">Рассчитать стоимость</button>
+            <p>*Данный калькулятор рассчитывает приблизительную стоимость грузоперевозки. Для более подробного расчета напишите 
+                <a href="#https://www.whatsapp.com/" class="link">нам.</a></p>
+        </div>
+    </div>
+
+    <div class="image-wrapper">
+        <div class="image-cont">
+            <a href="#red-box">
+            <img src="img/vladelets.png" class="image" ></a>
+            <p>Для грузовладельцев</p>
+        </div>
+        <div class="image-container">
+            <a href="#red">
+            <img src="img/perevozchik.png" class="image"></a>
+            <p>Для перевозчиков</p>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="red-box" id="red-box">
+            <p>Для грузовладельцев</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-section">
+            <p class="perevozki">FTL<br>перевозки</p>
+            <a href="index-cars.html"><button class="black-button">Наш автопарк</button></a>
+        </div>
+        <div class="right-section">
+            <ul class="unmarked-list">
+                <li><img src="img/list.png"> Оптимальные тарифы</li>
+                <li><img src="img/list.png"> Безопасность перевозок</li>
+                <li><img src="img/list.png"> Собственный транспорт</li>
+                <li><img src="img/list.png"> Индивидуальный подход</li>
+                <li><img src="img/list.png"> Разные виды страхования</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="right-sidebar">
+        <div class="red" id="red">
+            <p>Для перевозчиков</p>
+        </div>
+    </div>
+</div>
+
+<div class="cont">
+    <div class="left-side">
+        <p class="bold-text">Стратегическая задача нашей компании – это 
+            <br>построение доверительных отношений с клиентами. 
+            <br>Перевозчик найдет для себя отличные условия, 
+            <br>индивидуальный сервис и открытую ценовую политику 
+            <br>доступную всем без исключения.</p>
+            <button class="black" onclick="toggleOverlay()">Стать нашим партнером</button>
+            <div class="overlay" id="overlay">
+                <span class="close-btn" onclick="toggleOverlay()">&times;</span>
+                <h2>Хочу работать!</h2>
+                <input type="text" id="fullName" placeholder="ФИО" class="rounded-inp">
+                <input type="tel" id="phoneNumber" placeholder="+7 (999) 999-99-99" class="rounded-inp">
+                <input type="email" id="email" placeholder="E-mail" class="rounded-inp">
+                <textarea id="userRequest" placeholder="Ваш запрос" class="rounded-text"></textarea>
+                <div class="download-button">Отправить</div>
+            </div>
+    </div>
+    <div class="right-side">
+        <ul>
+            <li><img src="img/list.png"> Высокие тарифы</li>
+            <li><img src="img/list.png"> Строгие сроки оплаты услуг</li>
+            <li><img src="img/list.png"> Удобство сдачи документов</li>
+            <li><img src="img/list.png"> Загрузка во всех городах России</li>
+        </ul>
+    </div>
+</div>
+
+<div class="curvy">
+    <h1 class="question">Остались вопросы?</h1>
+    <p class="data">Внесите свои контактные данные и мы свяжемся с вами.</p>
+    <input type="text" class="input-field" placeholder="Имя">
+    <input type="tel" class="input-field" placeholder="+7 (999) 999-99-99 ">
+    <input type="text" class="input-field" placeholder="E-mail">
+    <a href="" class="submit-button">Отправить</a>
+
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="left-content">
+            <p>606440,<br> Нижегородская обл.<br>г. Бор, пер. Полевой 12</p>
+        </div>
+        <div class="right-content">
+            <p>Телефон<br> 8 (800) 2222-702<br><br>Аренда спецтехники<br> 8 (920) 019-40-25</p>
+        </div>
+        <div class="center-content">
+            <iframe src="https://yandex.ru/maps/20037/bor/house/polevoy_pereulok_12/YE0Ydg5hSEcHQFtsfX91eX9nZg==/?ll=44.091120%2C56.348343&z=16"></iframe>
+        </div>
+    </div>
+</footer>
+
+<script src="script-uslugi.js"></script>
+
+</body>
+</html>

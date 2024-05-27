@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камелия</title>
+    <link rel="stylesheet" href="style-home.css">
+    <meta name="yandex-verification" content="90d9306cec82fb16" />
+</head>
+<body>
+    <header>
+        <meta name="yandex-verification" content="9198f0261c163a0a" />
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.png" alt="Логотип компании"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index-uslugi.html">Услуги</a></li>
+                <li><a href="index-drivers.html">Водителям</a></li>
+                <li><a href="index-cars.html">Наш автопарк</a></li>
+                <li><a href="index-contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+          <a href="https://web.telegram.org/a/" class="social-link"><img src="img/telegram.png" alt="Telegram"></a>
+          <a href="https://www.whatsapp.com/" class="social-link"><img src="img/whatsapp.png" alt="Whatsapp"></a>
+          <a href="https://account.mail.ru/login?page=https%3A%2F%2Fe.mail.ru%2Fmessages%2Finbox&allow_external=1" class="social-link"><img src="img/mail.png" alt="Mail"></a>
+            <span class="phone">8 (800) 2222-702</span>
+        </div>
+    </header>
+    <div class="curvy-background">
+        <h1 class="company-heading">Грузовые перевозки</h1>
+        <p class="company-subheading">по всей России</p>
+        <p class="company-description">Наша компания осуществляет полный комплекс услуг
+          <br> по организации грузоперевозок автомобильным транспортом, 
+          <br>проектной логистике, аренде строительной спецтехники, 
+          <br>а также продаже грузовой техники.</p>
+        <img src="img/truck.png" alt="Фура" class="truck-image">
+        <div class="contact-button" onclick="toggleOverlay()">Связаться с нами</div>
+        <div class="overlay" id="overlay">
+            <span class="close-btn" onclick="toggleOverlay()">&times;</span>
+            <h2>Опишите свой запрос и наши менеджеры свяжутся с вами</h2>
+            <form action="https://formspree.io/kputtseva@yandex.ru" method="POST"></form>
+            <input type="text" id="fullName" placeholder="ФИО" class="rounded-inp">
+            <input type="tel" id="phoneNumber" placeholder="+7 (999) 999-99-99" class="rounded-inp">
+            <input type="email" id="mail" placeholder="E-mail" class="rounded-inp">
+            <textarea id="userRequest" placeholder="Ваш запрос" class="rounded-text"></textarea>
+            <div class="download-button" onclick="sendEmail()">Отправить</div>
+            <div class="successMessage" style="display: none; color:green;">Ваше обращение отправлено успешно!</div>
+            <div class="errorMessage" style="display: none; color: red;">Возникла ошибка при отправке обращения.</div>
+        </div>
+    </div>
+    
+
+    <div class="additional-text">
+        <p>Мы стремимся оставаться лидерами на рынке транспортных услуг и предоставлять высококачественный сервис на протяжении многих лет.</p>
+        <p>Мы с оптимизмом смотрим в будущее и приглашаем к сотрудничеству всех, кому важно оптимальное сочетание сроков, стоимости и гарантий.</p>
+    </div>
+
+    <div class="map-container">
+        <img src="img/map.png" alt="Карта" class="map-image">
+    
+        <div class="location-marker" style="top: 320px; right: 300px;">
+            <span class="tooltip">Киров</span></div>
+        <div class="location-marker" style="top: 340px; right: 220px;">
+            <span class="tooltip">Пермь</span></div>
+        <div class="location-marker" style="top: 400px; right: 220px;">
+            <span class="tooltip">Уфа</span></div>
+        <div class="location-marker" style="top: 400px; right: 180px;">
+            <span class="tooltip">Челябинск</span></div>
+        <div class="location-marker" style="top: 570px; right: 200px;">
+            <span class="tooltip">Новосибирск</span></div>
+        <div class="location-marker" style="top: 410px; right: 300px;">
+            <span class="tooltip">Самара</span></div>
+        <div class="location-marker" style="top: 360px; right: 340px;">
+            <span class="tooltip">Нижний Новгрод, Бор</span></div>
+        <div class="location-marker" style="top: 360px; right: 420px;">
+            <span class="tooltip">Ногинск</span></div>
+        <div class="location-marker" style="top: 320px; right: 380px;">
+            <span class="tooltip">Ярославль</span></div>
+        <div class="location-marker" style="top: 260px; right: 460px;">
+            <span class="tooltip">Санкт-Петербург</span></div>
+        <div class="location-marker" style="top: 460px; right: 420px;">
+            <span class="tooltip">Воронеж</span></div>
+        <div class="location-marker" style="top: 410px; right: 420px;">
+            <span class="tooltip">Липецк</span></div>
+        <div class="location-marker" style="top: 510px; right: 440px;">
+            <span class="tooltip">Ростов-на-Дону</span></div>
+        <div class="location-marker" style="top: 540px; right: 440px;">
+            <span class="tooltip">Краснодар</span></div>
+        <div class="location-marker" style="top: 490px; right: 380px;">
+            <span class="tooltip">Волгоград</span></div>
+        <div class="location-marker" style="top: 460px; right: 330px;">
+            <span class="tooltip">Саратов</span></div>
+        <div class="location-marker" style="top: 420px; right: 350px;">
+            <span class="tooltip">Пенза</span></div>
+        <div class="location-marker" style="top: 430px; right: 390px;">
+            <span class="tooltip">Тамбов</span></div>
+        <div class="location-marker" style="top: 420px; right: 470px;">
+            <span class="tooltip">Курск</span></div>
+    </div>
+
+    <div class="centered-text">
+        <p class="centered-text">В цифрах</p>
+    </div>
+    
+    <div class="additional-stats">
+        <p class="left">13 лет</p>
+        <p class="center">19 филиалов</p>
+        <p class="right">5000 кг</p>
+    </div>
+
+    <div class="additional-info">
+        <p>На рынке грузоперевозок</p>
+        <p>По всей России </p>
+        <p>Минимальный вес груза</p>
+    </div>
+
+    <div class="images-right">
+        <div class="right-container">
+            <img src="img/TC.png" alt="ТС" style="width: 250px; height: auto;">
+            <p>Собственный парк ТС</p>
+        </div>
+        <div class="right-container">
+            <img src="img/GLONLASS.png" alt="ГЛОНАСС" style="width: 250px; height: auto;">
+            <p>Система слежения ГЛОНАСС</p>
+        </div>
+    </div>
+
+    <div class="uslugi-heading">
+        <h2>Предоставляем услуги грузоперевозок
+            <br>
+             собственным и наемным транспортом</h2>
+    </div>
+
+    <div class="bullet-list">
+        <p><img src="img/checkmark.png" alt="Красная галочка"> Срочная и безопасная доставка Ваших грузов;</p>
+        <p><img src="img/checkmark.png" alt="Красная галочка">Диспетчерское сопровождение и навигационный контроль <br></p>
+        <p><img src="img/none.png" alt="Белая галочка">на время следования.</p>
+    </div>
+
+    <div class="gabarits">
+        <h2>Перевозим грузы по всей России<br>
+            (габариты авто: 13,6 *2,45* 2,6)</h2>
+    </div>
+
+        <a href="index-uslugi.html" class="podrobnee-button">Подробнее об услугах</a>
+
+        <div class="about">
+            <h2>О нас</h2>
+        </div>
+
+        <div class="three">
+            <h2>>3000
+                <br>
+                Довольных клиентов
+            </h2>
+        </div>
+
+        <div class="adout-us">
+            <p>Компания ведет свою деятельность с 2004 г. За эти годы накоплен
+                <br>
+                большой опыт в организации междугородних перевозок по всей
+                <br>
+                России. Наш парк состоит из 343 автомобилей, не старше 2018 года
+                <br>
+                выпуска.
+                <br>
+                С каждым днем мы стремимся соответствовать европейским
+                <br>
+                стандартам качества, а также честному и стабильному стилю
+                <br>
+                ведения бизнеса.
+            </p>
+        </div>
+
+    <div class="work-heading">
+        <h2>Как мы работаем</h2>
+    </div>
+
+    <div class="image-with-text">
+        <div class="image-cont">
+            <img src="img/1.png" alt="Image 1">
+            <div class="text-cont">
+                <p>Вы оставляете заявку через форму на сайте, и мы связываемся с вами в течение 5 минут!</p>
+            </div>
+        </div>
+        <div class="image-cont">
+            <img src="img/2.png" alt="Image 2">
+            <div class="text-cont">
+                <p>Расчет стоимости и направления. Подбор предложения, согласно вашим потребностям</p>
+            </div>
+        </div>
+        <div class="image-cont">
+            <img src="img/3.png" alt="Image 3">
+            <div class="text-cont">
+                <p>Погрузка и транспортировка до точки назначения</p>
+            </div>
+        </div>
+        <div class="image-cont">
+            <img src="img/4.png" alt="Image 4">
+            <div class="text-cont">
+                <p>Отгрузка в точке назначения</p>
+            </div>
+        </div>
+        <div class="image-cont">
+            <img src="img/5.png" alt="Image 5">
+            <div class="text-cont">
+                <p>Отправка закрывающих документом курьером или через ЭДО</p>
+            </div>
+        </div>
+    </div>
+    <div class="vopros-heading">
+        <h2>Частые вопросы</h2>
+    </div>
+
+    <div class="gray-boxes">
+        <div class="gray-box" onclick="toggleDetails(this)">
+            <p>В вашей собственности есть автомобили?</p>
+            <div class="details-box" onclick="toggleDetails(this)">
+                Да, в собственности есть грузовые машины под разные веса и разные габариты.
+            </div>
+            <span class="close-btn">X</span>
+        </div>
+        <div class="gray-box" onclick="toggleDetails(this)">
+            <p>Клиент ошибся в весе груза. Вы откажетесь от перевозки?</p>
+            <div class="details-box">
+                Если размеры груза отличаются от указанных клиентом, производится перерасчет. 
+            </div>
+            <span class="close-btn">X</span>
+        </div>
+        <div class="gray-box" onclick="toggleDetails(this)">
+            <p>Поддерживаете ли вы связь с клиентом в нерабочее время?</p>
+            <div class="details-box">
+                Менеджер на связи с заказчиком 24/7 во время перевозки груза. Также на выходных и в праздничные дни.
+            </div>
+            <span class="close-btn">X</span>
+        </div>
+    </div>
+
+    <div class="centered">
+        <p class="centered">Оставить отзыв</p>
+    </div>
+
+    <div class="review-container">
+        <div class="review-slider" id="reviews-slider"></div>
+        <div class="review-form">
+            <div class="review-input">
+                <input type="text" placeholder="Введите ваше ФИО" class="rounded-input">
+            </div>
+            <div class="review-input">
+                <textarea placeholder="Оставьте ваш комментарий" class="rounded-textarea"></textarea>
+            </div>
+            <button class="sub-button" onclick="addReview()">Отправить</button>
+        </div>
+    </div>
+
+    <div class="curvy" id="curvy">
+        <h1 class="question">Остались вопросы?</h1>
+        <p class="data">Внесите свои контактные данные и мы свяжемся с вами.</p>
+        <input type="text" id="name" class="input-field" placeholder="Имя">
+        <input type="tel" id="phone" class="input-field" placeholder="+7 (999) 999-99-99 ">
+        <input type="text" id="email" class="input-field" placeholder="E-mail">
+        <div class="submit-button" onclick="sendEmail()">Отправить</div>
+        <p id="message"></p>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="left-content">
+                <p>606440,<br> Нижегородская обл.<br>г. Бор, пер. Полевой 12</p>
+            </div>
+            <div class="right-content">
+                <p>Телефон<br> 8 (800) 2222-702<br><br>Аренда спецтехники<br> 8 (920) 019-40-25</p>
+            </div>
+            <div id="map" class="center-content">
+                <iframe src="https://yandex.ru/maps/-/CDfy7E5Y" frameborder="0"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script-home.js"></script>
+    
+</body>
+</html>
